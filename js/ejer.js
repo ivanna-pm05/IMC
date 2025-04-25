@@ -3,6 +3,7 @@ const resultado = 'Su indice de masa corporal es:'
 const resultgenero = 'El total de '
 const mensaje = 'Basandonos en ese resultado su estado dentro del imc es:';
 const mensaje2 = 'Algo salió mal'
+const sobrepeso = 'El total de pacientes con sobre peso:'
 const mensajesalir = 'Bye :)'
 alert(bienvenida);
 let running = true;
@@ -71,11 +72,12 @@ do {
             break;
         case '3':
             alert(`El promedio de edad es ${promedad}`)
+            break;
         case '4':
             alert(`El total de menores registrados es ${menores}`)
             break;
         case '5':
-            alert(`El total de Hombres con sobre peso es${hombresobrepeso} y Mujeres con sobre peso es \n ${mujersobrepeso}`)
+            alert(`${sobrepeso}\nHombres:${hombresobrepeso}\nMujeres:${mujersobrepeso}\n`)
             break;
         case '6':
             let pacientebajoImc = persona[0];
@@ -83,7 +85,7 @@ do {
                 if (persona[i].imc < pacientebajoImc.imc){
                 pacientebajoImc = persona[i]
                 };
-            alert(`${pacientebajoImc}\nID: ${pacientebajoImc.id}\nNombre: ${pacientebajoImc.nombre}\nEdad: ${pacientebajoImc.edad}\nGenero: ${pacientebajoImc.genero}\nIMC: ${pacientebajoImc.imc}`)
+            alert(`Paciente con el IMC más bajo:\nID: ${pacientebajoImc.id}\nNombre: ${pacientebajoImc.nombre}\nEdad: ${pacientebajoImc.edad}\nGenero: ${pacientebajoImc.genero}\nIMC: ${pacientebajoImc.imc}`);
             break;
         case '7':
             alert(mensajesalir)
